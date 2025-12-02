@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>トウフ進化論 - 激走アクション</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="gameContainer">
+    <canvas id="gameCanvas" width="800" height="450"></canvas>
+    
+    <div id="uiLayer">
+        
+        <div id="titleScreen">
+            <h1>激走！トウフ工場</h1>
+            <p>難易度を選んでスタート</p>
+            <div class="btn-group">
+                <button id="btn-easy" onclick="startGame('EASY')">かんたん</button>
+                <button id="btn-normal" onclick="startGame('NORMAL')">ふつう</button>
+                <button id="btn-hard" onclick="startGame('HARD')">むずかしい</button>
+            </div>
+        </div>
+
+        <img id="clearImage" src="" alt="Clear Image">
+
+        <div id="resultScreen" style="display:none;">
+            <div id="resultMessage">STAGE CLEAR!</div>
+            <button id="restartBtn" onclick="showTitle()">タイトルへ戻る</button>
+            <button id="nextBtn" onclick="nextStage()" style="display:none; background-color:#E91E63; margin-left:10px;">次のステージへ</button>
+        </div>
+        
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

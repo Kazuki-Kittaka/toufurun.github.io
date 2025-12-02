@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: white;
+    font-family: 'Verdana', sans-serif;
+    overflow: hidden;
+    user-select: none;
+}
+
+#gameContainer {
+    position: relative;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+canvas {
+    background-color: #87CEEB;
+    display: block;
+}
+
+/* UIレイヤー */
+#uiLayer {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    text-shadow: 3px 3px 0 #000;
+    color: #fff;
+}
+
+.btn-group {
+    display: flex;
+    gap: 15px;
+}
+
+button {
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.1s;
+    color: #fff;
+    text-shadow: 1px 1px 0 rgba(0,0,0,0.5);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+#btn-easy { background-color: #4CAF50; box-shadow: 0 4px 0 #2E7D32; }
+#btn-normal { background-color: #FF9800; box-shadow: 0 4px 0 #EF6C00; }
+#btn-hard { background-color: #F44336; box-shadow: 0 4px 0 #C62828; }
+
+#resultMessage {
+    font-size: 50px;
+    font-weight: bold;
+    text-shadow: 3px 3px 0 #000;
+    margin-bottom: 20px;
+    display: none;
+}
+
+#restartBtn {
+    background-color: #2196F3;
+    box-shadow: 0 4px 0 #1565C0;
+    display: none;
+}
+
+/* クリア画像のスタイル */
+#clearImage {
+    display: none; /* 最初は隠す */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* ど真ん中に配置 */
+    max-width: 80%;  /* 画面幅の80%まで */
+    max-height: 80%; /* 画面高さの80%まで */
+    border: 5px solid #fff;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+    z-index: 10; /* 最前面に */
+    border-radius: 10px;
+}
